@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fully-Fulfilled | Калькулятор стоимости</title>
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+  <style type="text/css">
+    body { background-color: #EEE; }
+    .input-field { padding: 0 0.9rem !important; min-height: 3.7rem !important; }
+    .modal .modal-footer { padding: 24px; height: 96px; }
+    .alert { font-size: 2rem; text-align: center; padding: 4px; }
+  </style>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Fully-Fulfilled</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="container" style="padding: 2rem;">
+    <h1 class="header center teal-text text-lighten-2">Калькулятор стоимости</h1>
+    <form class="row" name="main" action="fuckUp">
+      <div class="input-field col s12 l6">
+        <select name="packaging_type" required="required">
+          <option value="0" disabled selected>Не выбрано</option>
+          <option value="1">Упаковка в зиппакет</option>
+          <option value="2">Упаковка в боппакет</option>
+          <option value="3">Упаковка в ВПП</option>
+          <option value="4">Упаковка запаяный рукав</option>
+          <option value="5">Упаковка в термоусадочную пленку</option>
+        </select>
+        <label>Выберете тип упаковки</label>
+      </div>
+      <div class="col s12 l6 input-field"><label><input type="checkbox" name="complectation"                                value="1" /><span class="black-text">Комплектация</span></label></div>
+      <div class="col s12 l6 input-field"><label><input type="checkbox" name="marking"                                      value="1" /><span class="black-text">Маркировка</span></label></div>
+      <div class="col s12 l6 input-field"><label><input type="checkbox" name="marking_on_the_top_package"                   value="1" /><span class="black-text">Маркировка на верхнюю упаковку</span></label></div>
+      <div class="col s12 l6 input-field"><label><input type="checkbox" name="tagling"                                      value="1" /><span class="black-text">Биркирование</span></label></div>
+      <div class="col s12 l6 input-field"><label><input type="checkbox" name="visual_check_for_defects"                     value="1" /><span class="black-text">Визуальная проверка на брак</span></label></div>
+      <div class="col s12 l6 input-field"><label><input type="checkbox" name="checking_for_defective_electrical_appliances" value="1" /><span class="black-text">Проверка на брак электроприборов</span></label></div>
+      <div class="col s12 l6 input-field"><label><input type="checkbox" name="formation_of_delivery_box"                    value="1" /><span class="black-text">Формирование короба поставки</span></label></div>
+      <div class="col s12 l6 input-field tooltipped" data-position="bottom" data-tooltip="Введите целое число">
+        <input id="number_of_delivery_boxes" type="text" name="number_of_delivery_boxes" value="1" required="required" />
+        <label for="number_of_delivery_boxes">Количество коробов поставки</label>
+      </div>
+      <div class="col s12 l6 input-field tooltipped" data-position="bottom" data-tooltip="Введите целое число">
+        <input id="goods_quantity" type="text" name="goods_quantity" value="1" required="required" />
+        <label for="goods_quantity">Количество товара</label>
+      </div>
+      <div class="col s12 l6 input-field tooltipped" data-position="bottom" data-tooltip="Введите целое число или оставьте поле пустым">
+        <input id="storage_over_2_weeks" type="text" name="storage_over_2_weeks" />
+        <label for="storage_over_2_weeks">Хранение свыше 2 недель (количество суток)</label>
+      </div>
+      <div class="col s12" style="text-align: center;">
+        <!-- <button class="btn waves-effect waves-light" type="submit" name="action" onclick="test()"></button> -->
+      </div>
+    </form>
+  </div>  
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <svg style="zoom: 0.5" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="400" height="400" id="svg4611" sodipodi:version="0.32" inkscape:version="0.92.4 (5da689c313, 2019-01-14)" version="1.0" sodipodi:docname="Greek_uc_sigma.svg">
+            <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-256.6798,-531.7963)">
+              <g aria-label="Σ" style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Times New Roman';text-align:start;text-anchor:start;fill:#26a69a;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" id="text5540">
+                <path d="m 340.80927,575.52393 h 198.63281 l 5.27344,66.60156 h -7.42188 q -1.36719,-19.72656 -6.64062,-30.07813 -5.27344,-10.54687 -14.45313,-15.23437 -9.17969,-4.6875 -29.10156,-4.6875 h -90.42969 l 80.66406,103.51562 -91.79687,108.39844 h 100.58594 q 27.34375,0 41.79687,-8.78906 14.45313,-8.78906 21.67969,-36.71875 l 7.42187,1.75781 -11.32812,80.07813 H 340.80927 v -7.03125 L 442.76239,713.02393 340.80927,582.55518 Z" style="font-size:40px;line-height:1.25;text-align:center;text-anchor:middle" id="path814"/>
+              </g>
+            </g>
+          </svg><br />
+          <a class="waves-effect waves-light btn-large teal lighten-1 modal-trigger" href="#RSLTMSG" onclick="costCompute()">
+            Рассчитать стоимость<!-- <span style="font-family: Times New Roman, serif; font-size: 26px; vertical-align: middle;">Σ</span> -->
+            <i class="material-icons right">send</i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="bg01.jpeg" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <!-- <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up development</h5>
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+  </div> -->
+
+  <!-- <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+  <!-- <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+  </div> -->
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="brown-text text-lighten-3" href="https://psychonoise.github.io/">Magic Clique</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="RSLTMSG" class="modal">
+    <div class="modal-content">
+      <h4 align="center">Результат:</h4>
+      <p id="RESULT" style="font-size: 3rem; text-align: center"></p>
+      <p id="ALERT" class="alert"></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn">Назад</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn">Оформить заказ</a>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
