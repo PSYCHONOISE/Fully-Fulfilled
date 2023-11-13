@@ -7,9 +7,11 @@
   <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
   <style type="text/css">
     body { background-color: #EEE; }
-    .input-field { padding: 0 0.9rem !important; min-height: 3.7rem !important; }
+    #calc1 .input-field { padding: 0 0.9rem !important; min-height: 3.7rem !important; }
     .modal .modal-footer { padding: 24px; height: 96px; }
     .alert { font-size: 2rem; text-align: center; padding: 4px; }
+    .spoilerCtrl { margin-left: auto; }
+    .collapsible-body.row { margin-bottom: 0; }
   </style>
 </head>
 <body>
@@ -27,7 +29,7 @@
     </div>
   </nav>
 
-  <div class="container" style="padding: 2rem;">
+  <!-- <div id="calc1" class="container" style="padding: 2rem;">
     <h1 class="header center teal-text text-lighten-2">Калькулятор стоимости</h1>
     <form class="row" name="main" action="fuckUp">
       <div class="input-field col s12 l6">
@@ -61,11 +63,113 @@
         <label for="storage_over_2_weeks">Хранение свыше 2 недель (количество суток)</label>
       </div>
       <div class="col s12" style="text-align: center;">
-        <!-- <button class="btn waves-effect waves-light" type="submit" name="action" onclick="test()"></button> -->
+        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="test()"></button>
       </div>
     </form>
-  </div>  
+  </div>   -->
 
+  <div class="container" style="padding: 2rem;">
+    <h1 class="header center teal-text text-lighten-2">Калькулятор стоимости</h1>
+    <form class="row" name="main" action="fuckUp">
+
+      <div style="padding: 1rem;" class="row card">
+        <div class="col s12 center">
+          <p style="padding: 24px; line-height: 0.5rem; border-bottom: 1px solid rgba(160,160,160,0.2);" class="card-title">Категория до (ДВШ)</p>
+        </div>
+        <p class="col s12 l3 card-content">
+          <label>
+            <input class="with-gap" name="group1" type="radio" checked />
+            <span class="black-text">30 см.</span>
+          </label>
+        </p>
+        <p class="col s12 l3 card-content">
+          <label>
+            <input class="with-gap" name="group1" type="radio" />
+            <span class="black-text">60 см.</span>
+          </label>
+        </p>
+        <p class="col s12 l3 card-content">
+          <label>
+            <input class="with-gap" name="group1" type="radio"  />
+            <span class="black-text">90 см.</span>
+          </label>
+        </p>
+        <p class="col s12 l3 card-content">
+          <label>
+            <input class="with-gap" name="group1" type="radio" />
+            <span class="black-text">120 см.</span>
+          </label>
+        </p>
+      </div>
+
+      <ul class="collapsible popout">
+        <li>
+          <div class="collapsible-header"><label class="splrdChkbx1"><input class="with-gap" type="radio" name="service" /><span class="black-text">Услуга 1</span></label><span class="material-icons spoilerCtrl">expand_more</span></div>
+          <div class="collapsible-body row">
+            <label class="col s12 l6"><input class="service1" type="checkbox" name="service1sub1" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label>
+            <label class="col s12 l6"><input class="service1" type="checkbox" name="service1sub2" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label>
+            <label class="col s12 l6"><input class="service1" type="checkbox" name="service1sub3" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label>
+            <label class="col s12 l6"><input class="service1" type="checkbox" name="service1sub4" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><label class="splrdChkbx2"><input class="with-gap" type="radio" name="service" /><span class="black-text">Услуга 2</span></label><span class="material-icons spoilerCtrl">expand_more</span></div>
+          <div class="collapsible-body row">
+            <label class="col s12 l6"><input class="service2" type="checkbox" name="service2sub1" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label>
+            <label class="col s12 l6"><input class="service2" type="checkbox" name="service2sub2" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label>
+            <label class="col s12 l6"><input class="service2" type="checkbox" name="service2sub3" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label>
+            <label class="col s12 l6"><input class="service2" type="checkbox" name="service2sub4" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label>
+          </div>
+        </li>
+      </ul>
+      <h4 class="center teal-text text-lighten-2">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h4>
+      <ul class="collapsible popout">
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional01" /><span class="black-text">Погрузка паллеты: 125₽                                          </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs01" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional02" /><span class="black-text">Выгрузка паллеты: 125₽                                          </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs02" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional03" /><span class="black-text">Погрузочно-разгрузочные работы ручные до 100 кг: 250₽           </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs03" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional04" /><span class="black-text">Погрузочно-разгрузочные работы ручные до 500 кг: 500₽           </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs04" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional05" /><span class="black-text">Паллетирование (паллет + стрейч), паллет + 1/3 рулона: 500₽     </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs05" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional06" /><span class="black-text">Стрейчевание паллета: 200₽                                      </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs06" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional07" /><span class="black-text">Браковка обычный товар: 6₽                                      </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs07" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional08" /><span class="black-text">Браковка детальная (одежда): 12₽                                </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs08" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional09" /><span class="black-text">Браковка детальная швеями (одежда): 24₽                         </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs09" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional10" /><span class="black-text">Браковка электроника: 12₽                                       </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs10" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional11" /><span class="black-text">Комплектовка свыше 3 кг: 1₽                                     </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs11" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional12" /><span class="black-text">Комплектовка свыше 5 кг: 3₽                                     </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs12" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional13" /><span class="black-text">Комплектовка свыше 10 кг: 6₽                                    </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs13" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional14" /><span class="black-text">Комплектовка КГТ: от 12₽                                        </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs14" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional15" /><span class="black-text">Укладка в короб/на палет до 3 кг: 1₽                            </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs15" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional16" /><span class="black-text">Укладка в короб/на палет свыше 3 кг: 3₽                         </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs16" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional17" /><span class="black-text">Укладка в короб/на палет свыше 5 кг: 6₽                         </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs17" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional18" /><span class="black-text">Укладка в короб/на палет свыше 10 кг: 9₽                        </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs18" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional19" /><span class="black-text">Укладка в короб/на палет КГТ: 12₽                               </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs19" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional20" /><span class="black-text">Биркование на пластиковый биркодержатель: 6₽                    </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs20" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional21" /><span class="black-text">Биркование на нитку: 8₽                                         </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs21" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional22" /><span class="black-text">Упаковка на Зип лок с бегунком до 20 * 15 см: 18₽               </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs22" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional23" /><span class="black-text">Упаковка на Зип лок с бегунком до 20 * 30 см: 24₽               </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs23" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional24" /><span class="black-text">Упаковка на Зип лок с бегунком до 30 * 40 см: 30₽               </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs24" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional25" /><span class="black-text">Упаковка на Зип лок с бегунком до 50 * 70 см: 42₽               </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs25" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional26" /><span class="black-text">Заклейка товара скотчем: 2₽                                     </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs26" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional27" /><span class="black-text">Стоимость транспортировки Короба 60 * 40 * 40: 95₽              </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs27" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional28" /><span class="black-text">Стоимость транспортировки Короба 5ти слойного 60 * 40 * 40: 130₽</span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs28" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional29" /><span class="black-text">Создание поставки до 5 SKU: 300₽                                </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs29" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional30" /><span class="black-text">Создание поставки до 10 SKU: 500₽                               </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs30" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional31" /><span class="black-text">Создание поставки до 20 SKU: 750₽                               </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs31" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional32" /><span class="black-text">Создание поставки до 50 SKU: 1500₽                              </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs32" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional33" /><span class="black-text">Замер габаритов: 250₽                                           </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs33" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional34" /><span class="black-text">Набивка товара ВВП: от 12₽                                      </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs34" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional35" /><span class="black-text">Набивка товара крафт бумагой: от 15₽                            </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs35" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional36" /><span class="black-text">Ведение отгрузок товара FBS на 1 магазин: 2500₽/мес.            </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs36" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional37" /><span class="black-text">Логистика до 3х паллет: 1600₽                                   </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs37" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional38" /><span class="black-text">Логистика от 3х паллет: 1300₽                                   </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs38" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional39" /><span class="black-text">ТТН: 100₽                                                       </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs39" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional40" /><span class="black-text">Хранение паллет: 50₽/сутки                                      </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs40" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional41" /><span class="black-text">Европаллет: 300₽                                                </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs41" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+        <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional42" /><span class="black-text">РВД (Пакет формирования посставок, создание шаблона заказа, создание шаблона коробов, привязка ШК коробов, занесение данных о водителе и количестве коробов): 300₽/поставка</span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs42" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
+      </ul>
+
+    </form>
+  </div>  
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
