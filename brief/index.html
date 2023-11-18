@@ -4,31 +4,64 @@
   <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
-  <style type="text/css">
-    body { background-color: #EEE; }
-    #calc1 .input-field { padding: 0 0.9rem !important; min-height: 3.7rem !important; }
-    .modal .modal-footer { padding: 24px; height: 96px; }
-    .alert { font-size: 2rem; text-align: center; padding: 4px; }
-    .spoilerCtrl { margin-left: auto; }
-    .collapsible-body.row { margin-bottom: 0; }
-  </style>
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/vaakash/socializer/master/socializer.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link type="text/css" rel="stylesheet" href="../css/style.css" media="screen,projection" />
+  <link rel="stylesheet" href="../css/aos.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo One|Comfortaa">
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Fully-Fulfilled</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <div class="navbar-fixed" style="position: absolute;">
+    <nav class="black" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo white-text">Fully-Fulfilled</a>
+        <ul class="right hide-on-med-and-down white-text">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav" style="z-index: 1000;">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  <header data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">
+    <div class="container">
+      <img class="logo" src="../img/logo.png" alt="logo">
+      <h1 class="white-text">
+        Fully Fulfilled
+      </h1>
+      <p class="lead white-text">
+        Предоставляем бесперебойные услуги складского фулфиллмента для эффективных продаж на маркетплейсах.
+        <br /><br />
+        Наша команда экспертов заботится о том, чтобы ваша продукция была тщательно собрана, упакована и отправлена, чтобы Вы могли сосредоточиться на развитии своего бизнеса.
+      </p>
     </div>
-  </nav>
-
+  </header>
+  <section>
+    <div class="container">
+      <h2 class="center">Фулфилмент для маркетплейсов<br />в Санкт-Петербурге</h2>
+      <div class="row">
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true" class="col s3 center">
+          <img src="../assets/icons/marketplaces/33847120_100_q55.avif" alt="Anti-spam" class="mx-auto">
+          <h4>Wildberries</h4>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col s3 center">
+          <img src="../assets/icons/marketplaces/33847141_100_q55.avif" alt="Phishing Detect" class="mx-auto">
+          <h4>Ozon</h4>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col s3 center">
+          <img src="../assets/icons/marketplaces/33847152_100_q55.avif" alt="Smart Scan" class="mx-auto">
+          <h4>Яндекс Маркет</h4>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col s3 center">
+          <img src="../assets/icons/marketplaces/33847158_100_q55.avif" alt="Smart Scan" class="mx-auto">
+          <h4>СберМаркет</h4>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- <div id="calc1" class="container" style="padding: 2rem;">
     <h1 class="header center teal-text text-lighten-2">Калькулятор стоимости</h1>
     <form class="row" name="main" action="fuckUp">
@@ -68,10 +101,42 @@
     </form>
   </div>   -->
 
-  <div class="container" style="padding: 2rem;">
-    <h1 class="header center teal-text text-lighten-2">Калькулятор стоимости</h1>
-    <form class="row" name="main" action="fuckUp">
+  <section id="SCNT86958675">
+    <div class="container" style="background-color: #FFF; font-size: 1.5rem;">
+      <h2 class="header center">Для кого подходит фулфилмент?</h2>
+      <div class="row">
+        <div class="col s12 l6" data-aos="zoom-in">
+          <p class="a"><b>Для новичков</b><img data-aos="fade-right" data-aos-duration="1000" style="float: left" src="../assets/1.jpg" alt="1.jpg"></p>
+          <p class="b" data-aos="zoom-in" data-aos-duration="900">Которые не знают как сделать все правильно, чтобы весь товар был принят на складах и не потерялся</p>
+        </div>
+        <div class="col s12 l6" data-aos="zoom-in">
+          <p class="a"><b>Для селлеров</b><img data-aos="fade-left" data-aos-duration="1000" style="float: right" src="../assets/2.jpeg" alt="2.jpeg"></p>
+          <p class="b" data-aos="zoom-in" data-aos-duration="900">Которые хотят продавать по системе FBS, но нет возможности держать свой склад и затруднительно, и дорого отправлять каждый день товары на пункты приема</p>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom: 0;">
+        <div class="col s12 l6" data-aos="zoom-in">
+          <p class="a"><b>Для опытных селлеров</b><img data-aos="fade-right" data-aos-duration="1000" style="float: left" src="../assets/3.png" alt="3.png"></p>
+          <p class="b" data-aos="zoom-in" data-aos-duration="900">Которые хотят убрать у себя работу по упаковке и отправке товара, и сосредоточиться на увеличении продаж</p>
+        </div>
+        <div class="col s12 l6" data-aos="zoom-in">
+          <p class="a"><b>Для крупных поставщиков</b><img data-aos="fade-left" data-aos-duration="1000" style="float: right" src="../assets/4.jpg" alt="4.jpg"></p>
+          <p class="b" data-aos="zoom-in" data-aos-duration="900">Которым держать свой склад организационно проблематично и дорого</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section id="SCNT83958114">
+      <div class="container" style="padding: 2rem;">
+        <h2 class="header center">Схема работы</h2>
+        <img data-aos="fade-up" data-aos-duration="1200" width="100%" src="../assets/scheme.png">
+      </div>
+  </section>
+
+  <div class="container" style="padding: 2rem;">
+    <h2 class="header center">Калькулятор стоимости</h2>
+    <form class="row" name="main" action="fuckUp">
       <div style="padding: 1rem;" class="row card">
         <div class="col s12 center">
           <p style="padding: 24px; line-height: 0.5rem; border-bottom: 1px solid rgba(160,160,160,0.2);" class="card-title">Категория до (ДВШ)</p>
@@ -122,7 +187,7 @@
           </div>
         </li>
       </ul>
-      <h4 class="center teal-text text-lighten-2">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h4>
+      <h4 class="center">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h4>
       <ul class="collapsible popout">
         <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional01" /><span class="black-text">Погрузка паллеты: 125₽                                          </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs01" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
         <li><div class="collapsible-header"><label class="splrdChkbx3"><input type="checkbox" name="additional02" /><span class="black-text">Выгрузка паллеты: 125₽                                          </span></label><span class="material-icons spoilerCtrl">expand_more</span></div><div class="collapsible-body"><label><input type="checkbox" name="fbs02" disabled="disabled" /><span class="black-text">Доставка по системе FBS (15₽ к стоимости услуги)</span></label></div></li>
@@ -256,35 +321,66 @@
   </div> -->
 
   <footer class="page-footer teal">
-    <div class="container">
+    <div class="container"style="padding: 32px 0 128px; font-size: 1.5rem;">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+        <div class="col s6 white-text">
+          <h2 class="white-text" style="font-family: Comfortaa !important;">Свяжитесь с нами</h2>
+          <p>
+            Оставьте заявку и получите персональный расчёт стоимости первого заказа.
+          </p>
+          <ul style="padding: 16px;">
+            <li>Email: company@email.com</li>
+            <li>Phone: 8 (123) 456 78 90 </li>
+            <li>Address: Place your text here</li>
           </ul>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+        <div class="col s6">
+          <form>
+            <div class="row">
+              <div class="input-field col s6">
+                <input class="white-text" type="text" id="name" required="required">
+                <label for="name" >Ваше имя</label>
+              </div>
+              <div class="input-field col s6">
+                <input class="white-text" type="email" class="validate" id="Email" required="required">
+                <label for="Email">Ваш Email</label>
+                <span class="helper-text" data-error="Неверные данные" data-success=""></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea class="white-text materialize-textarea" id="message" rows="3"></textarea>
+                <label for="message">Сообщение</label>
+              </div>
+            </div>
+            <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Отправить</button>
+          </form>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        <a class="brown-text text-lighten-3" href="https://psychonoise.github.io/">Magic Clique</a>
+        <div class="row" style="margin-bottom: 0">
+          <div class="col l6 s12" style="padding: 1.6rem 0; height: 64px;">
+            <a class="brown-text text-lighten-3" href="https://psychonoise.github.io/">Magic Clique</a>  
+          </div>
+          <div class="col l6 s12">
+            <ul style="text-align: right;">
+              <li style="display: inline-block">
+              <a href="#"><i class="fab fa-telegram" style="font-size: 48px; color: #FFF"></i></a>
+              </li>
+              <li style="margin: 4px; display: inline-block">
+              <a href="#"><i class="fab fa-vk" style="font-size: 48px; color: #FFF"></i></a>
+              </li>
+              <li style="margin: 4px; display: inline-block">
+              <a href="#"><i class="fab fa-whatsapp" style="font-size: 48px; color: #FFF"></i></a>
+              </li>
+              <li style="margin: 4px; display: inline-block">
+                <a href="#"><i class="material-icons" style="font-size: 32px; color: #FFF; border-radius: 100%; border: 3px solid #FFF; padding: 4px;">mail</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
@@ -302,9 +398,19 @@
   </div>
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
+  <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+  <script src="../js/aos.js"></script>
+  <script>
+    AOS.init({
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/vaakash/socializer@f4c4e9/js/socializer.min.js"></script>
+  <script>
+  (function(){
+      socializer( '.socializer' );
+  }());
+  </script>
   </body>
 </html>
