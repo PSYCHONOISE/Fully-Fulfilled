@@ -1,4 +1,5 @@
-body { background-color: #EEE; overflow: visible !important; }
+body { background-color: #EEE; overflow-x: hidden; width: 100% !important; }
+.container { overflow: hidden; }
 #calc1 .input-field { padding: 0 0.9rem !important; min-height: 3.7rem !important; }
 .modal .modal-footer { padding: 24px; height: 96px; }
 .alert { font-size: 2rem; text-align: center; padding: 4px; }
@@ -10,23 +11,6 @@ section .container { margin: 64px auto 64px auto; }
 @media only screen and (min-width: 992px) and (max-width: 1400px) {
   .container { margin-left: 2em; margin-right: 2em; width: calc(100vw - 4em);}
 }
-
-
-#SCTN93867596 {
-  background: url('../assets/delivery-men-loading-carboard-boxes-van-while-getting-ready-shipment.jpg') fixed;
-  /* background: url('../assets/iconbg.png') fixed repeat;*/
-  background-size: cover;
-  background-position: center;
-}
-
-#SCTN93867596 th, #SCTN93867596 td { padding: 0.5em 0.25em; }
-#SCTN93867596 h2 { color: white; text-shadow: 2px 2px 0px #000, 5px 4px 0px rgba(0,0,0,0.15); }
-#SCTN93867596 h4 { position: relative; z-index: 4; margin: 0 0 24px 0; /* text-shadow: 3px 5px 2px #474747; height: 120px; line-height: 120px; */ }
-#SCTN93867596 svg { margin: 24px auto 0 auto; filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)); }
-#SCTN93867596 .pic { height: 128px; margin-top: 16px; }
-#SCTN93867596 .container { margin-bottom: 128px; }
-#SCTN93867596 table { color: #000; }
-#SCTN93867596 table.striped>tbody>tr:nth-child(odd) { background: rgb(0 0 0 / 10%); }
 
 #SCNT94306750 p { margin: 1em 0; }
 #SCNT94306750 img { border-radius: 16px; }
@@ -48,9 +32,15 @@ h2, h3, h4, h5 {
   color: #333;
 }
 
+@media only screen and (min-width: 0) and (max-width: 534px) {
+  h2 { font-size: 2rem }
+  h4 { font-size: 1.8rem }
+  svg { max-width: 170px; }
+}
+
 header {
 /*   background: linear-gradient(to bottom, #00F, #111);*/
-/*  background-image: url('../assets/bgs/bg2-transformed.jpeg');*/
+/*  background-image: url('assets/bgs/bg2-transformed.jpeg');*/
 /*  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);*/
 /*  background-size: cover;*/
   padding: 0 calc(1.5rem * .5);
@@ -112,15 +102,11 @@ section h2 { margin-bottom: 3rem; }
   }
 }
 #SCNT83958114 {
-  background-image: url('../assets/bgs/1647923968_2-gamerwall-pro-p-svetlo-sinii-fon-krasivie-2.jpg');
+  background-image: url('assets/bgs/1647923968_2-gamerwall-pro-p-svetlo-sinii-fon-krasivie-2.jpg');
   background-attachment: fixed;
   background-size: cover;
 /*  background: url('https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700006400&semt=ais') fixed repeat;*/
 }
-
-#SCTN86093571 .material-icons { font-size: 32px; margin-right: 16px; }
-#SCTN86093571 .collapsible-header { font-weight: bolder; }
-#SCTN86093571 .collapsible-body { font-weight: lighter; }
 
 .call-to-action-btn-1 {
   border: none;
@@ -183,11 +169,6 @@ p {
   font-size: inherit;
 }
 
-footer.page-footer { margin: 0; }
-footer .input-field > label, footer .input-field input, footer form > button { font-size: 0.8em !important; }
-footer form > button { line-height: 2.5em !important; height: auto !important; }
-footer svg { margin: 24px auto 0 auto; filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)); }
-
 /*body {
   position: absolute;
   top: 0;
@@ -202,6 +183,7 @@ footer svg { margin: 24px auto 0 auto; filter: drop-shadow(3px 5px 2px rgb(0 0 0
   /* background: linear-gradient(to bottom, #00F, #111);*/
   position: fixed;
   width: 100%;
+  min-width: 1080px;
   height: 200vh;
   top: -25vh;
   /* left: 50%;*/
