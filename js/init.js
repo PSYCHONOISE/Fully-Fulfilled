@@ -120,6 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   // var instances = M.FormSelect.init(elems);
   // var rsltmsg = M.Modal.init(document.getElementById('RSLTMSG'));
+  var elems = document.querySelectorAll('.fixed-action-btn');
+  var instances = M.FloatingActionButton.init(elems, {'hoverEnabled': true, 'direction': 'top' });
+  var elems = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(elems);
 });
 
 // additionalCosts = {
